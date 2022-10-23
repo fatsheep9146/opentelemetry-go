@@ -12,8 +12,8 @@ require (
 	go.opentelemetry.io/build-tools/dbotconf v0.0.0-20220321164008-b8e03aff061a
 	go.opentelemetry.io/build-tools/multimod v0.0.0-20210920164323-2ceabab23375
 	go.opentelemetry.io/build-tools/semconvgen v0.0.0-20210920164323-2ceabab23375
-	golang.org/x/mod v0.6.0-dev.0.20220106191415-9b9b3d81d5e3
-	golang.org/x/tools v0.1.10
+	golang.org/x/mod v0.6.0
+	golang.org/x/tools v0.2.0
 )
 
 replace go.opentelemetry.io/otel => ../..
