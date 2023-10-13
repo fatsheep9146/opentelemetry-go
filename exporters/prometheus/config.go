@@ -31,6 +31,7 @@ type config struct {
 	readerOpts             []metric.ManualReaderOption
 	disableScopeInfo       bool
 	namespace              string
+	mappedResourceAttrs    []string
 }
 
 // newConfig creates a validated config configured with options.
@@ -148,6 +149,13 @@ func WithNamespace(ns string) Option {
 		}
 
 		cfg.namespace = ns
+		return cfg
+	})
+}
+
+func WithMappedResourceAttributes(attrs []string) Option {
+	return optionFunc(func(cfg config) config {
+		cfg.mappedResourceAttrs = attrs
 		return cfg
 	})
 }
